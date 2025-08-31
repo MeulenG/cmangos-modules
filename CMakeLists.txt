@@ -57,7 +57,7 @@ target_link_libraries(${LIBRARY_NAME}
 # Include and link all modules
 foreach(MODULE_NAME ${MODULE_NAMES})
   message(STATUS "Including module: ${MODULE_NAME}")
-  include_directories(${CMAKE_SOURCE_DIR}/src/modules/ ${MODULE_NAME}/src/)
+  include_directories(${CMAKE_SOURCE_DIR}/src/modules/${MODULE_NAME}/src)
   target_link_libraries(${LIBRARY_NAME} ${MODULE_NAME})
 endforeach()
 
